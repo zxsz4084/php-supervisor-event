@@ -7,13 +7,13 @@ date_default_timezone_set ( 'PRC' );
 
 if(! isset($_SERVER['SUPERVISOR_SERVER_URL']))
 {
-	write_stdout ( "not in supervisor\n" );
+	write_stderr ( "not in supervisor\n" );
 	exit;
 }
 
 if (! defined ( "STDIN" )) 
 {
-	write_stdout ( "not in stdin\n" );
+	write_stderr ( "not in stdin\n" );
 	exit;
 }
 
