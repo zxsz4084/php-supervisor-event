@@ -51,7 +51,7 @@ while ( 1 ) {
 	//http
 	$data = array(
 			'chat_type'=> 0,
-			'chat_id' => 176085,
+			'chat_id' => yourChatId,
 			'text' => $text
 	);
 	$query = http_build_query($data);
@@ -62,7 +62,7 @@ while ( 1 ) {
 			'content' => $query
 	);
 	$context = stream_context_create($options);
-	$url = "https://botapi.chaoxin.com/sendTextMessage/323554:cea3cd9d68121fe57f7a1f52759beb2d";
+	$url = "https://botapi.chaoxin.com/sendTextMessage/yourTokenId";
 	$result = file_get_contents($url, false, $context);
 	
 	// transition from READY to ACKNOWLEDGED
